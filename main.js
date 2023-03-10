@@ -1,12 +1,15 @@
-//                  excersice 4
-/* Construir el algoritmo que solicite el nombre y edad de 3
-personas y determine el nombre de la persona con mayor edad.*/
-let names = []
-let age = []
-/* let cont = Number(prompt("cuantas: ")) */
-for (let i = 0; i < 3; i++) {
-    names.push(prompt(`Ingrese nombre: ${i}`))
-    age.push(parseFloat(prompt(`Ingrese edad: ${i}`)))  
+//                  excersice 5
+/* Construir el algoritmo que lea por teclado dos números,
+si el primero es mayor al segundo informar su suma y
+diferencia, en caso contrario, informar el producto y la
+división del primero respecto al segundo.*/
+
+let n1 = parseFloat(prompt("Enter a number: "))
+let n2 = parseFloat(prompt("Enter a number: "))
+
+if (n1 > n2){
+    alert(`The sum is ${n1+n2} and their difference is ${n1-n2}`)
 }
-let mayor = age.indexOf(Math.max(...age))
-alert(names[mayor]+` es la persona mayor con una edad de ${Math.max(...age)}`)
+else{
+    alert(`The product is ${n1*n2} and its division is ${n1/n2}`)
+}
