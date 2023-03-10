@@ -1,18 +1,22 @@
-//                  excersice 1
-/* Construir el algoritmo para un programa que ingrese tres
-notas de un alumno, si el promedio es menor o igual a 3.9
-mostrar un mensaje "Estudie“, de lo contrario un mensaje que
-diga "becado" */
+//                  excersice 2
+/* Dado un número indicar si es par o impar y si es mayor de 10.*/
 
-let n1 = parseFloat(prompt("Ingrese nota1: "))
-let n2 = parseFloat(prompt("Ingrese nota2: "))
-let n3 = parseFloat(prompt("Ingrese nota3: "))
-
-let notas = (n1+n2+n3)/3
-let round = Math.round(notas)
-if (round <= 3.9 ){
-    console.log("estudie")
+let numero = prompt("Introduce un numero")
+if(numero % 2 == 0 && numero < 10){
+    document.write("El numero "+numero+" es par y menor que 10")
+}
+else if(numero % 2 == 0 && numero == 10){
+    document.write("El numero "+numero+" es par")
+}
+else if(numero % 2 == 0 && numero > 10){
+    document.write("El numero "+numero+" es par y es mayor a 10")
+}
+else if(numero % 2 != 0 && numero < 10){
+    document.write("El numero "+numero+" es impar y es menor a 10")
+}
+else if(numero % 2 != 0 && numero > 10){
+    document.write("El numero "+numero+" es impar y es mayor a 10")
 }
 else{
-    console.log("Becado")
+    document.write("error")
 }
