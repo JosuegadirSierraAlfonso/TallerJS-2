@@ -1,22 +1,9 @@
-//                  excersice 2
-/* Dado un número indicar si es par o impar y si es mayor de 10.*/
+//                  excersice 3
+/* Construir el algoritmo para determinar el voltaje de un
+circuito a partir de la resistencia y la intensidad de corriente.*/
 
-let numero = prompt("Introduce un numero")
-if(numero % 2 == 0 && numero < 10){
-    document.write("El numero "+numero+" es par y menor que 10")
-}
-else if(numero % 2 == 0 && numero == 10){
-    document.write("El numero "+numero+" es par")
-}
-else if(numero % 2 == 0 && numero > 10){
-    document.write("El numero "+numero+" es par y es mayor a 10")
-}
-else if(numero % 2 != 0 && numero < 10){
-    document.write("El numero "+numero+" es impar y es menor a 10")
-}
-else if(numero % 2 != 0 && numero > 10){
-    document.write("El numero "+numero+" es impar y es mayor a 10")
-}
-else{
-    document.write("error")
-}
+let r = parseFloat(prompt("Ingrese cantidad: "))
+let c = parseFloat(prompt("Ingrese cantidad: "))
+
+let voltaje = r*c
+console.log("El voltaje es: "+voltaje)
