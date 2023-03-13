@@ -1,15 +1,30 @@
-//                  excersice 5
-/* Construir el algoritmo que lea por teclado dos números,
-si el primero es mayor al segundo informar su suma y
-diferencia, en caso contrario, informar el producto y la
-división del primero respecto al segundo.*/
+//                  excersice 6
+/* Construir el algoritmo en Javascript para un programa
+para cualquier cantidad de estudiantes que lea el nombre,
+el sexo y la nota definitiva y halle al estudiante con la mayor
+nota y al estudiante con la menor nota y cuantos eran
+hombres y cuantos mujeres.*/
 
-let n1 = parseFloat(prompt("Enter a number: "))
-let n2 = parseFloat(prompt("Enter a number: "))
 
-if (n1 > n2){
-    alert(`The sum is ${n1+n2} and their difference is ${n1-n2}`)
-}
-else{
-    alert(`The product is ${n1*n2} and its division is ${n1/n2}`)
-}
+
+
+let names = []
+let notes = []
+let gender = ""
+let m = []
+let f = []
+do {
+  names.push(prompt("Enter a name: "))
+  gender = (prompt("Enter your gender (M or F): "))
+  if (gender == "m" || gender == "M" ){
+     m.push(1)
+  }else if(gender == "f" || gender == "F"){
+     f.push(1)
+  }
+  notes.push(parseFloat(prompt("Enter a note: ")))
+} while (confirm("wanna continue? "));
+let bestNote = notes.indexOf(Math.max(...notes))
+let worseNote = notes.indexOf(Math.min(...notes))
+alert(`The student with the highest grade is ${names[bestNote]}\n
+The student with the lowest grade is ${names[worseNote]}\n
+There are ${m.length} men and ${f.length} women`)
